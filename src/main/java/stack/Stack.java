@@ -24,7 +24,8 @@ public class Stack<TElement> implements StackInterface {
 
     @Override
     public Object pop() {
-        if(head.element == null) throw new InvalidDnDOperationException("Cannot remove element from empty Stack!");
+        if(head.element == null)
+            throw new InvalidDnDOperationException("Cannot remove element from empty Stack!");
         Object elementToRemove = head.element;
         head = head.next;
         stackSize--;

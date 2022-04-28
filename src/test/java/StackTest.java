@@ -12,7 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 public class StackTest{
 
-
+    private static final String FIRST_PUSH = "First push";
+    private static final String SECOND_PUSH = "Second push";
     @Test
     void push_first_integer_Element() {
         // given
@@ -32,11 +33,11 @@ public class StackTest{
         Stack<Integer> stringElements = new Stack<>();
 
         // when
-        stringElements.push("First Element");
+        stringElements.push(FIRST_PUSH);
 
         // then
         assertEquals(1, stringElements.size());
-        assertEquals("First Element", stringElements.get(0));
+        assertEquals(FIRST_PUSH, stringElements.get(0));
     }
 
     @Test
@@ -113,5 +114,22 @@ public class StackTest{
 
         // then
         assertEquals(exceptedMessage, currentMessage);
+    }
+
+    @Test
+    void pop_string_elements_from_stack() {
+        // given
+        Stack<String> stringStack = new Stack<>();
+
+        // when
+        stringStack.push(FIRST_PUSH);
+        stringStack.push(SECOND_PUSH);
+
+        Object firstRemove = stringStack.pop();
+        Object secondRemove = stringStack.pop();
+
+        // then
+        assertEquals(SECOND_PUSH, (String) firstRemove);
+        assertEquals(FIRST_PUSH, (String) secondRemove);
     }
 }

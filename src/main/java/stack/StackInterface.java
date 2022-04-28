@@ -27,7 +27,7 @@ public interface StackInterface<TElement> {
 
     /**
      * Returns the current size of the Stack.
-     * @return the size of your Stack.Stack
+     * @return the size of your Stack.
      */
     int size();
 
