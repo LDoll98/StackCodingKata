@@ -71,37 +71,37 @@ public class StackTest{
     @Test
     void push_more_elements() {
         // given
-        Stack<Integer> integerStack = new Stack<>();
+        Stack<Integer> integerElements = new Stack<>();
 
         // when
-        integerStack.push(1);
-        integerStack.push(2);
-        integerStack.push(3);
-        integerStack.push(4);
+        integerElements.push(1);
+        integerElements.push(2);
+        integerElements.push(3);
+        integerElements.push(4);
 
         // then
-        assertEquals(4, integerStack.size());
-        assertEquals(1, integerStack.get(integerStack.size()-1));
+        assertEquals(4, integerElements.size());
+        assertEquals(1, integerElements.get(integerElements.size()-1));
     }
 
     @Test
     void pop_elements_from_stack_and_check_return_values() {
         // given
-        Stack<Integer> integerStack = new Stack<>();
+        Stack<Integer> integerElements = new Stack<>();
 
         // when
-        integerStack.push(1);
-        integerStack.push(2);
-        integerStack.push(3);
-        Object removeTheThree = integerStack.pop();
-        Object removeTheTwo = integerStack.pop();
-        Object removeTheOne = integerStack.pop();
+        integerElements.push(1);
+        integerElements.push(2);
+        integerElements.push(3);
+        Object removeTheThree = integerElements.pop();
+        Object removeTheTwo = integerElements.pop();
+        Object removeTheOne = integerElements.pop();
 
         // then
         assertEquals(3, (Integer) removeTheThree);
         assertEquals(2, (Integer) removeTheTwo);
         assertEquals(1, (Integer) removeTheOne);
-        assertTrue(integerStack.isEmpty());
+        assertTrue(integerElements.isEmpty());
     }
 
     @Test
@@ -120,13 +120,13 @@ public class StackTest{
     @Test
     void pop_string_elements_from_stack() {
         // given
-        Stack<String> stringStack = new Stack<>();
+        Stack<String> stringElements = new Stack<>();
 
         // when
-        stringStack.push(FIRST_PUSH);
-        stringStack.push(SECOND_PUSH);
-        Object removeSecondPush = stringStack.pop();
-        Object removeFirstPush = stringStack.pop();
+        stringElements.push(FIRST_PUSH);
+        stringElements.push(SECOND_PUSH);
+        Object removeSecondPush = stringElements.pop();
+        Object removeFirstPush = stringElements.pop();
 
         // then
         assertEquals(SECOND_PUSH, (String) removeSecondPush);
@@ -136,19 +136,19 @@ public class StackTest{
     @Test
     void push_and_pop_in_random_order() {
         // given
-        Stack<Integer> integerStack = new Stack<>();
+        Stack<Integer> integerElements = new Stack<>();
 
         // when
-        integerStack.push(5);
-        Object removeTheFive = integerStack.pop();
-        Exception exception = assertThrows(InvalidDnDOperationException.class, integerStack::pop);
+        integerElements.push(5);
+        Object removeTheFive = integerElements.pop();
+        Exception exception = assertThrows(InvalidDnDOperationException.class, integerElements::pop);
         String currentMessage = exception.getMessage();
-        integerStack.push(7);
-        integerStack.push(9);
-        integerStack.push(1);
-        Object removeTheOne = integerStack.pop();
-        Object removeTheNine = integerStack.pop();
-        Object removeTheSeven = integerStack.pop();
+        integerElements.push(7);
+        integerElements.push(9);
+        integerElements.push(1);
+        Object removeTheOne = integerElements.pop();
+        Object removeTheNine = integerElements.pop();
+        Object removeTheSeven = integerElements.pop();
 
         // then
         assertEquals(5, removeTheFive);
