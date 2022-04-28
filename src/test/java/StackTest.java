@@ -1,4 +1,3 @@
-import stack.Stack;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
@@ -26,20 +25,18 @@ public class StackTest{
 
         // then
         assertEquals(1, integerStack.size());
-        assertEquals(1, integerStack.get(0));
     }
 
     @Test
     void push_first_string_element() {
         // give
-        Stack<Integer> stringElements = new Stack<>();
+        Stack<String> stringElements = new Stack<>();
 
         // when
         stringElements.push(FIRST_PUSH);
 
         // then
         assertEquals(1, stringElements.size());
-        assertEquals(FIRST_PUSH, stringElements.get(0));
     }
 
     @Test
@@ -52,7 +49,6 @@ public class StackTest{
 
         // then
         assertEquals(1, doubleElements.size());
-        assertEquals(1.5, doubleElements.get(0));
     }
 
     @Test
@@ -65,7 +61,6 @@ public class StackTest{
 
         // then
         assertEquals(1, charElements.size());
-        assertEquals('a', charElements.get(0));
     }
 
     @Test
@@ -81,7 +76,6 @@ public class StackTest{
 
         // then
         assertEquals(4, integerElements.size());
-        assertEquals(1, integerElements.get(integerElements.size()-1));
     }
 
     @Test
@@ -93,14 +87,14 @@ public class StackTest{
         integerElements.push(1);
         integerElements.push(2);
         integerElements.push(3);
-        Object removeTheThree = integerElements.pop();
-        Object removeTheTwo = integerElements.pop();
-        Object removeTheOne = integerElements.pop();
+        int removeTheThree = integerElements.pop();
+        int removeTheTwo = integerElements.pop();
+        int removeTheOne = integerElements.pop();
 
         // then
-        assertEquals(3, (Integer) removeTheThree);
-        assertEquals(2, (Integer) removeTheTwo);
-        assertEquals(1, (Integer) removeTheOne);
+        assertEquals(3, removeTheThree);
+        assertEquals(2, removeTheTwo);
+        assertEquals(1, removeTheOne);
         assertTrue(integerElements.isEmpty());
     }
 
@@ -125,12 +119,12 @@ public class StackTest{
         // when
         stringElements.push(FIRST_PUSH);
         stringElements.push(SECOND_PUSH);
-        Object removeSecondPush = stringElements.pop();
-        Object removeFirstPush = stringElements.pop();
+        String removeSecondPush = stringElements.pop();
+        String removeFirstPush = stringElements.pop();
 
         // then
-        assertEquals(SECOND_PUSH, (String) removeSecondPush);
-        assertEquals(FIRST_PUSH, (String) removeFirstPush);
+        assertEquals(SECOND_PUSH, removeSecondPush);
+        assertEquals(FIRST_PUSH, removeFirstPush);
     }
 
     @Test
@@ -140,15 +134,15 @@ public class StackTest{
 
         // when
         integerElements.push(5);
-        Object removeTheFive = integerElements.pop();
+        int removeTheFive = integerElements.pop();
         Exception exception = assertThrows(InvalidDnDOperationException.class, integerElements::pop);
         String currentMessage = exception.getMessage();
         integerElements.push(7);
         integerElements.push(9);
         integerElements.push(1);
-        Object removeTheOne = integerElements.pop();
-        Object removeTheNine = integerElements.pop();
-        Object removeTheSeven = integerElements.pop();
+        int removeTheOne = integerElements.pop();
+        int removeTheNine = integerElements.pop();
+        int removeTheSeven = integerElements.pop();
 
         // then
         assertEquals(5, removeTheFive);

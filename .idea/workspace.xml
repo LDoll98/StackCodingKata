@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e54dcccf-31c6-482e-ae79-6d7aa02967f7" name="Changes" comment="Add README.md and Test according the Table from the README.md">
+    <list default="true" id="e54dcccf-31c6-482e-ae79-6d7aa02967f7" name="Changes" comment="Refactor Testcode">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stack/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stack/StackInterface.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651048920141</updated>
       <workItem from="1651048921730" duration="20210000" />
-      <workItem from="1651123422487" duration="3866000" />
+      <workItem from="1651123422487" duration="6663000" />
     </task>
     <task id="LOCAL-00001" summary="Implement generic stack with jUnit Tests">
       <created>1651067473236</created>
@@ -135,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651126943800</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactor Testcode">
+      <created>1651127330385</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651127330385</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Refactor Testcode">
+      <created>1651127670837</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651127670837</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +173,7 @@
     <MESSAGE value="Implement generic stack with jUnit Tests" />
     <MESSAGE value="Add Test for pop() operation." />
     <MESSAGE value="Add README.md and Test according the Table from the README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add README.md and Test according the Table from the README.md" />
+    <MESSAGE value="Refactor Testcode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor Testcode" />
   </component>
 </project>

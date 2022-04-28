@@ -1,50 +1,38 @@
-package stack;
-
 import java.awt.dnd.InvalidDnDOperationException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class Stack<TElement> implements StackInterface {
+public class Stack<T> {
     private int stackSize;
     private Node head = new Node();
     private class Node {
-        private TElement element;
+        private T element;
         private Node next;
     }
 
-    @Override
-    public void push(Object o) {
+
+    public void push(T o) {
         Node newNode = new Node();
-        newNode.element = (TElement) o;
+        newNode.element = o;
         newNode.next = head;
         head = newNode;
         stackSize++;
     }
 
-    @Override
-    public Object pop() {
+
+    public T pop() {
         if(head.element == null)
             throw new InvalidDnDOperationException("Cannot remove element from empty Stack!");
-        Object elementToRemove = head.element;
+        T elementToRemove = head.element;
         head = head.next;
         stackSize--;
         return elementToRemove;
     }
 
-    @Override
-    public Object get(int index) {
-        Node currentNode = head;
-        for (int i = 0; i < index; i++)
-            currentNode = currentNode.next;
-        return currentNode.element;
-    }
 
-    @Override
     public int size() {
         return stackSize;
     }
 
-    @Override
+
     public boolean isEmpty() {
         return stackSize == 0;
     }
