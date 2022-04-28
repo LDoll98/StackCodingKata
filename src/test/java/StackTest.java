@@ -15,6 +15,7 @@ public class StackTest{
     private static final String FIRST_PUSH = "First push";
     private static final String SECOND_PUSH = "Second push";
     private static final String EXCEPTION_MESSAGE = "Cannot remove element from empty Stack!";
+
     @Test
     void push_first_integer_Element() {
         // given
@@ -92,14 +93,14 @@ public class StackTest{
         integerStack.push(1);
         integerStack.push(2);
         integerStack.push(3);
-        Object removedLastElement = integerStack.pop();
-        Object removedOneMoreElement = integerStack.pop();
-        Object removedFirstPushedElement = integerStack.pop();
+        Object removeTheThree = integerStack.pop();
+        Object removeTheTwo = integerStack.pop();
+        Object removeTheOne = integerStack.pop();
 
         // then
-        assertEquals(3, (Integer) removedLastElement);
-        assertEquals(2, (Integer) removedOneMoreElement);
-        assertEquals(1, (Integer) removedFirstPushedElement);
+        assertEquals(3, (Integer) removeTheThree);
+        assertEquals(2, (Integer) removeTheTwo);
+        assertEquals(1, (Integer) removeTheOne);
         assertTrue(integerStack.isEmpty());
     }
 
@@ -110,11 +111,10 @@ public class StackTest{
 
         // when
         Exception exception = assertThrows(InvalidDnDOperationException.class, emptyStack::pop);
-        String exceptedMessage = EXCEPTION_MESSAGE;
         String currentMessage = exception.getMessage();
 
         // then
-        assertEquals(exceptedMessage, currentMessage);
+        assertEquals(EXCEPTION_MESSAGE, currentMessage);
     }
 
     @Test
@@ -125,13 +125,12 @@ public class StackTest{
         // when
         stringStack.push(FIRST_PUSH);
         stringStack.push(SECOND_PUSH);
-
-        Object firstRemove = stringStack.pop();
-        Object secondRemove = stringStack.pop();
+        Object removeSecondPush = stringStack.pop();
+        Object removeFirstPush = stringStack.pop();
 
         // then
-        assertEquals(SECOND_PUSH, (String) firstRemove);
-        assertEquals(FIRST_PUSH, (String) secondRemove);
+        assertEquals(SECOND_PUSH, (String) removeSecondPush);
+        assertEquals(FIRST_PUSH, (String) removeFirstPush);
     }
 
     @Test
@@ -142,11 +141,8 @@ public class StackTest{
         // when
         integerStack.push(5);
         Object removeTheFive = integerStack.pop();
-
         Exception exception = assertThrows(InvalidDnDOperationException.class, integerStack::pop);
-        String expectedMessage = EXCEPTION_MESSAGE;
         String currentMessage = exception.getMessage();
-
         integerStack.push(7);
         integerStack.push(9);
         integerStack.push(1);
@@ -156,7 +152,7 @@ public class StackTest{
 
         // then
         assertEquals(5, removeTheFive);
-        assertEquals(expectedMessage, currentMessage);
+        assertEquals(EXCEPTION_MESSAGE, currentMessage);
         assertEquals(1, removeTheOne);
         assertEquals(9, removeTheNine);
         assertEquals(7, removeTheSeven);
