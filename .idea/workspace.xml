@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e54dcccf-31c6-482e-ae79-6d7aa02967f7" name="Changes" comment="Implement generic stack with jUnit Tests">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="e54dcccf-31c6-482e-ae79-6d7aa02967f7" name="Changes" comment="Add Test for pop() operation.">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stack/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stack/Stack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stack/StackInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stack/StackInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,19 +41,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JUnit.StackTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
@@ -115,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651048920141</updated>
       <workItem from="1651048921730" duration="20210000" />
-      <workItem from="1651123422487" duration="1111000" />
+      <workItem from="1651123422487" duration="3090000" />
     </task>
     <task id="LOCAL-00001" summary="Implement generic stack with jUnit Tests">
       <created>1651067473236</created>
@@ -124,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651067473236</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Test for pop() operation.">
+      <created>1651124583346</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651124583346</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implement generic stack with jUnit Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement generic stack with jUnit Tests" />
+    <MESSAGE value="Add Test for pop() operation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Test for pop() operation." />
   </component>
 </project>
